@@ -32,9 +32,12 @@ BeautifulSoup (for scraping the websites for quotes)
 
 ### Data Collection
 ```
+cd scraping
+mkdir litquotes
 python litquotes_scraper.py
 python quotationspage_scraper.py
 
+# IDK what the following does
 cd litquotes/
 copy /b *.txt ../quotes.txt
 cd ../quotationspage
@@ -48,3 +51,6 @@ then run
 ```
 python main.py
 ```
+
+Gave up at
+````data_src = ["./data/positive.quotes","./data/negative.quotes"]```
