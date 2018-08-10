@@ -42,8 +42,9 @@ subjects.pop()
 for subject in subjects:
     sub_page = requests.get(url+subject)
     get_quotes(sub_page)
-    
+
 with open('quotes.txt', 'w') as outfile:
     for quote in qlist:
-        outfile.write(quote + '\n')
-    
+        quote = quote.encode('utf8', 'replace')
+        outfile.write(str(quote) + '\n')
+
